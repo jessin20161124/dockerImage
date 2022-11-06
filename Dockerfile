@@ -9,7 +9,8 @@ RUN yum install glibc-common -y
 RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 #RUN export LANG=zh_CN.UTF-8
 #RUN echo "export LANG=zh_CN.UTF-8" >> /etc/locale.conf
-ENV  LANG C.UTF-8
+ENV LANG C.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 # 安装git（待优化）
 RUN yum -y update \
